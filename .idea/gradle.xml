@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core/database" />
+            <option value="$PROJECT_DIR$/core/ui" />
+            <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/cart" />
+            <option value="$PROJECT_DIR$/feature/cart/data" />
+            <option value="$PROJECT_DIR$/feature/cart/domain" />
+            <option value="$PROJECT_DIR$/feature/cart/presentation" />
+            <option value="$PROJECT_DIR$/feature/details" />
+            <option value="$PROJECT_DIR$/feature/details/data" />
+            <option value="$PROJECT_DIR$/feature/details/domain" />
+            <option value="$PROJECT_DIR$/feature/details/presentation" />
+            <option value="$PROJECT_DIR$/feature/explore" />
+            <option value="$PROJECT_DIR$/feature/explore/data" />
+            <option value="$PROJECT_DIR$/feature/explore/domain" />
+            <option value="$PROJECT_DIR$/feature/explore/presentation" />
+            <option value="$PROJECT_DIR$/feature/home" />
+            <option value="$PROJECT_DIR$/feature/home/data" />
+            <option value="$PROJECT_DIR$/feature/home/domain" />
+            <option value="$PROJECT_DIR$/feature/home/presentation" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
