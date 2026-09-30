@@ -19,7 +19,6 @@ class HomeViewModel @Inject constructor(
     private val repository: HomeRepository
 ): ViewModel() {
     var state by mutableStateOf(HomeState())
-    private var searchJob: Job? = null
 
     init {
         viewModelScope.launch {
@@ -27,22 +26,8 @@ class HomeViewModel @Inject constructor(
             getProducts()
         }
     }
-        fun onEvent(event: HomeEvent){
-            when(event){
-                is HomeEvent.OnSearchQueryChange -> {
-                    state = state.copy(
-                        searchQuery = event.query
-                    )
-                    searchJob?.cancel()
-                    searchJob = viewModelScope.launch {
-                        delay(500.milliseconds)
-                       getProducts()
-                    }
-                }
-            }
-        }
+
     private suspend fun getProducts(){
-        viewModelScope.launch {
             state = state.copy(
                 isLoading = true
             )
@@ -51,7 +36,7 @@ class HomeViewModel @Inject constructor(
                 products = products,
                 isLoading = false
             )
-        }
+
     }
     fun getProductByCategory(category: String){
         viewModelScope.launch {

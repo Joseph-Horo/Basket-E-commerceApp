@@ -38,3 +38,5 @@ include(":feature:cart:domain")
 include(":feature:explore:data")
 include(":core:ui")
 include(":core:database")
+
+include(":feature:profile:presentation")

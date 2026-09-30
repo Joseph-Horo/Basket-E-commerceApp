@@ -36,6 +36,7 @@ class ExploreViewModel @Inject constructor(
                 searchJob?.cancel()
                 searchJob = viewModelScope.launch {
                     delay(500.milliseconds)
+
                     if (event.query.isBlank()){
                         getProducts()
                     }else{
