@@ -4,7 +4,9 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://github.com/user-attachments/assets/0859c4bb-e82c-4be3-8b3b-5f6431b3aed3" alt="project-screenshot" width="4842" height="2551/">
+<img src="https://github.com/user-attachments/assets/385bcd44-7105-4ab4-96da-2a8a7ce5d878" alt="project-screenshot" width="3634" height="2551/">
+
+<img src="https://github.com/user-attachments/assets/45feb9ea-d839-42af-bf9c-e85689061006" alt="project-screenshot" width="3634" height="2551/">
 
   
   
