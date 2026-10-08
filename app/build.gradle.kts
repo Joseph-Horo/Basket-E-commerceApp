@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -63,10 +64,15 @@ dependencies {
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+    implementation(platform("com.google.firebase:firebase-bom:34.19.0"))
+    implementation("com.google.firebase:firebase-auth")
     implementation(project(":core:ui"))
 
     implementation(project(":feature:home:presentation"))
     implementation(project(":feature:cart:presentation"))
     implementation(project(":feature:explore:presentation"))
     implementation(project(":feature:details:presentation"))
+    implementation(project(":feature:profile:presentation"))
+    implementation(project(":feature:auth:login"))
+    implementation(project(":feature:auth:signup"))
 }

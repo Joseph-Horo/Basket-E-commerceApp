@@ -3,8 +3,10 @@ package com.example.basket.navigation
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.ShoppingCart
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -20,26 +22,27 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.NavArgument
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.auth.login.LoginScreen
+import com.example.auth.signup.SignUpScreen
 import com.example.cart.presentation.CartScreen
 import com.example.cart.presentation.CartTopBar
-import com.example.core.ui.HomeFill
-import com.example.core.ui.HomeOut
+import com.example.core.ui.icons.HomeFill
+import com.example.core.ui.icons.HomeOut
+
 import com.example.details.presentation.DetailsScreen
 import com.example.explore.presentation.ExploreScreen
 import com.example.home.presentation.CategoryScreen
 import com.example.home.presentation.HomeScreen
 import com.example.home.presentation.HomeTopBar
-import com.example.home.presentation.HomeViewModel
-import dagger.hilt.android.lifecycle.HiltViewModel
+import com.example.profile.presentation.ProfileScreen
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -67,7 +70,20 @@ fun AppNavigation() {
             selectedIcon = Icons.Filled.ShoppingCart,
             unselectedIcon = Icons.Outlined.ShoppingCart,
             route = "cart"
+        ),
+        BottomBarItem(
+            title = "Profile",
+            selectedIcon = Icons.Filled.Person,
+            unselectedIcon = Icons.Outlined.Person,
+            route = "profile"
         )
+    )
+    val showBottomBar = currentRoute in listOf(
+        "home",
+        "explore",
+        "cart",
+        "details",
+        "profile"
     )
 
     Scaffold(
@@ -83,6 +99,7 @@ fun AppNavigation() {
             }
         },
         bottomBar = {
+            if (showBottomBar){
             NavigationBar(
                 containerColor = Color.White,
                 tonalElevation = 0.dp
@@ -97,24 +114,35 @@ fun AppNavigation() {
                             Text(item.title)
                         },
                         icon = {
-                            Icon(imageVector = if (currentRoute == item.route){
-                                item.selectedIcon
-                            }else{
-                                item.unselectedIcon
-                            }, contentDescription = item.title)
+                            Icon(
+                                imageVector = if (currentRoute == item.route) {
+                                    item.selectedIcon
+                                } else {
+                                    item.unselectedIcon
+                                }, contentDescription = item.title
+                            )
                         }
                     )
 
                 }
-
+            }
             }
         }
     ) { innerPadding->
         NavHost(
             navController = navController,
-            startDestination = "home",
+            startDestination = "login",
             modifier = Modifier.padding(innerPadding)
         ) {
+            composable("login"){
+                LoginScreen(navController = navController)
+            }
+            composable("signup"){
+                SignUpScreen(navController = navController)
+            }
+            composable("profile"){
+                ProfileScreen(navController = navController)
+            }
             composable("home"){
                 HomeScreen(navController = navController)
             }

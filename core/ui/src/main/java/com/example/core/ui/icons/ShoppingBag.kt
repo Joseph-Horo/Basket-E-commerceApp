@@ -1,5 +1,4 @@
-package com.example.test
-
+package com.example.core.ui.icons
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
@@ -33,7 +32,7 @@ public val ShoppingBag: ImageVector
             strokeLineCap = StrokeCap.Butt,
             strokeLineJoin = StrokeJoin.Bevel,
             strokeLineMiter = 1f,
-            pathFillType = PathFillType.Companion.NonZero,
+            pathFillType = PathFillType.NonZero,
           ) {
             moveTo(6f, 22f)
             quadTo(5.18f, 22f, 4.59f, 21.41f)

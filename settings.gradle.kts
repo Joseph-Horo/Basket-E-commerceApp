@@ -40,3 +40,5 @@ include(":core:ui")
 include(":core:database")
 
 include(":feature:profile:presentation")
+include(":feature:auth:login")
+include(":feature:auth:signup")
