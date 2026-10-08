@@ -1,5 +1,4 @@
-package com.example.core.ui
-
+package com.example.core.ui.icons
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
@@ -10,14 +9,14 @@ import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
 
 @Suppress("CheckReturnValue")
-public val HomeOut: ImageVector
+public val HomeFill: ImageVector
   get() {
-    if (_homeOut != null) {
-      return _homeOut!!
+    if (_homeFill != null) {
+      return _homeFill!!
     }
-    _homeOut =
+    _homeFill =
       ImageVector.Builder(
-          name = "HomeOut",
+          name = "HomeFill",
           defaultWidth = 24.dp,
           defaultHeight = 24.dp,
           viewportWidth = 24f,
@@ -35,34 +34,21 @@ public val HomeOut: ImageVector
             strokeLineMiter = 1f,
             pathFillType = PathFillType.NonZero,
           ) {
-            moveTo(6f, 19f)
-            horizontalLineTo(9f)
-            verticalLineTo(13f)
-            horizontalLineToRelative(6f)
-            verticalLineToRelative(6f)
-            horizontalLineToRelative(3f)
-            verticalLineTo(10f)
-            lineTo(12f, 5.5f)
-            lineTo(6f, 10f)
-            verticalLineToRelative(9f)
-            close()
             moveTo(4f, 21f)
             verticalLineTo(9f)
             lineTo(12f, 3f)
             lineToRelative(8f, 6f)
             verticalLineTo(21f)
-            horizontalLineTo(13f)
-            verticalLineTo(15f)
-            horizontalLineTo(11f)
-            verticalLineToRelative(6f)
+            horizontalLineTo(14f)
+            verticalLineTo(14f)
+            horizontalLineTo(10f)
+            verticalLineToRelative(7f)
             horizontalLineTo(4f)
-            close()
-            moveToRelative(8f, -8.75f)
             close()
           }
         }
         .build()
-    return _homeOut!!
+    return _homeFill!!
   }
 
-private var _homeOut: ImageVector? = null
+private var _homeFill: ImageVector? = null

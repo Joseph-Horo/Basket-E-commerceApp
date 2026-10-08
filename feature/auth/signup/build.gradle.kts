@@ -3,14 +3,14 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 
-    alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
     id("com.google.gms.google-services")
 
 }
 
 android {
-    namespace = "com.example.profile.presentation"
+    namespace = "com.example.auth.signup"
     compileSdk {
         version = release(37)
     }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "894051772481",
+    "project_id": "basket-f70a9",
+    "storage_bucket": "basket-f70a9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894051772481:android:4b4906dd47d43e9dbdbec0",
+        "android_client_info": {
+          "package_name": "com.example.basket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8HzUw2GeyqEXTv3OhCo1hNha6B72Et1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
